@@ -1,15 +1,1 @@
 Forumla for validating CAS numbers in Excel.
-  A1 = CAS number to be checked
-
-  B1 = SUBSTITUTE(A1,"-","")
-
-  =MID(B1,LEN(B1),1)+0=
-     MOD(IFERROR(9*MID(B1,LEN(B1)-9,1),0)+
-         IFERROR(8*MID(B1,LEN(B1)-8,1),0)+
-         IFERROR(7*MID(B1,LEN(B1)-7,1),0)+
-         IFERROR(6*MID(B1,LEN(B1)-6,1),0)+
-         IFERROR(5*MID(B1,LEN(B1)-5,1),0)+
-         IFERROR(4*MID(B1,LEN(B1)-4,1),0)+
-         IFERROR(3*MID(B1,LEN(B1)-3,1),0)+
-         IFERROR(2*MID(B1,LEN(B1)-2,1),0)+
-         IFERROR(1*MID(B1,LEN(B1)-1,1),0),10)
